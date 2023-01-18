@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors());
 
-app.use("", Routes);
+app.use("/", Routes);
 
 const PORT = 8000;
 

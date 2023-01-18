@@ -1,4 +1,3 @@
-const { response } = require("express");
 const User = require("../model/UserModel");
 
 exports.addUser = async (req, res) => {
