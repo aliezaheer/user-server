@@ -20,3 +20,13 @@ exports.getUsers = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 };
+
+exports.getUser = async (req, res) => {
+  console.log(req.params._id);
+  try {
+    const user = await User.findById(req.params._id);
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
+};
